@@ -9,7 +9,7 @@ import { PlotsService } from '../api/plots.service';
 })
 export class PlotsComponent implements OnInit {
   plotArgs: PlotArgs = {
-    f: 'x*x*x',
+    f: 'abs(x)',
     a: -1,
     b: 1,
     n: 5,

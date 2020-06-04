@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-integer-input',
   templateUrl: './integer-input.component.html',
   styleUrls: ['./integer-input.component.css']
 })
-export class IntegerInputComponent implements OnInit {
+export class IntegerInputComponent implements OnInit, OnChanges {
   @Output() value = new EventEmitter<number>();
   @Input() initialValue = 0;
   @Input() minValue: number;
@@ -42,5 +42,11 @@ export class IntegerInputComponent implements OnInit {
 
   private updateValue() {
     this.value.emit(this.fieldValue);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.initialValue.previousValue !== changes.initialValue.currentValue) {
+      this.fieldValue = changes.initialValue.currentValue;
+    }
   }
 }

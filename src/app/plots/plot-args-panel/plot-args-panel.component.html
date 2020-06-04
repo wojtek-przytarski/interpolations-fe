@@ -9,14 +9,14 @@
 
     <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
 
-    <div class="row">
+    <div class="row mt-3 m-1">
       <h5>Examples:</h5>
-      <ul class="examples">
-        <li (click)="setExampleData('sin(x) * x ** 2', -1, 1, 5)" mathjax>$$f(x) = x^2 * sin(x), [-1, 1], n = 5 $$</li>
-        <li (click)="setExampleData('sin(x) * x ** 2', -1, 1, 15)" mathjax>$$f(x) = x^2 * sin(x), [-1, 1], n = 15$$</li>
-        <li (click)="setExampleData('abs(x)', -1, 1, 5)" mathjax>$$f(x) = {{'{|x|}'}}, [-1, 1], n = 5$$</li>
-        <li (click)="setExampleData('abs(x)', -1, 1, 7)" mathjax>$$f(x) = {{'{|x|}'}}, [-1, 1], n = 7$$</li>
-        <li (click)="setExampleData('1 \/ \(1 + x ** 2\)', -5, 5, 7)" mathjax>$$f(x) = {{'\\frac{1}{1 + x^2}'}}, [-5, 5], n = 7$$</li>
+      <ul class="list-group list-group-flush w-100">
+        <li class="list-group-item list-group-item-action p-0" (click)="setExampleData('sin(x) * x ** 2', -1, 1, 5)" mathjax>$$f(x) = x^2 * sin(x), [-1, 1], n = 5 $$</li>
+        <li class="list-group-item list-group-item-action p-0" (click)="setExampleData('sin(x) * x ** 2', -1, 1, 15)" mathjax>$$f(x) = x^2 * sin(x), [-1, 1], n = 15$$</li>
+        <li class="list-group-item list-group-item-action p-0" (click)="setExampleData('sin(x) * x ** 2', -100, 100, 30)" mathjax>$$f(x) = x^2 * sin(x), [-100, 100], n = 30$$</li>
+        <li class="list-group-item list-group-item-action p-0" (click)="setExampleData('abs(x)', -1, 1, 5)" mathjax>$$f(x) = {{'{|x|}'}}, [-1, 1], n = 5$$</li>
+        <li class="list-group-item list-group-item-action p-0" (click)="setExampleData('abs(x)', -1, 1, 7)" mathjax>$$f(x) = {{'{|x|}'}}, [-1, 1], n = 7$$</li>
       </ul>
     </div>
   </div>
