@@ -118,8 +118,13 @@
               "devServerTarget": "interpolations-fe:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "interpolations-fe"
 }
